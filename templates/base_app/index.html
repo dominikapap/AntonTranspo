@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends "base_app/base.html" %}
+{% load static %}
+{% block body_block %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home</title>
+
+<style>
+.busbackground-image {
+  background-image: url("static/images/b2.jpg");
+}
+</style>
+
+<div class="busbackground-image">
+  <div class="background-text">
+    <h1 class = "company-title">Anton Transpo</h1>
+    <br>
+    <h1>Ride with Us</h1>
+    <br>
+    <br>
+    <button type="button" class="btn btn-outline-light">Learn more</button>
+  </div>
+</div>
+
+
+
+{% endblock %}
