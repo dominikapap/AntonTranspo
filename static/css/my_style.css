@@ -1,5 +1,7 @@
 
-
+body{
+  font-family: 'Noto Serif', serif;
+}
 .busbackground-image {
   background-color: #cccccc;
   height: 1500px;
@@ -37,4 +39,11 @@ footer {
     padding: 5px;
     background-color:#262626;
     color: gray;
+  }
+  input[type=text], input[type=email], textarea {
+   width: 100%;
+   padding: 12px 20px;
+   margin: 8px 0;
+   display: inline-block;
+
   }

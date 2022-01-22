@@ -7,21 +7,21 @@
 
 <style>
 .busbackground-image {
-  background-image: url("static/images/b2.jpg");
+  background-image: url({%static 'images/b3.jpg'%});
 }
 </style>
-
-<div class="busbackground-image">
-  <div class="background-text">
-    <h1 class = "company-title">Anton Transpo</h1>
-    <br>
-    <h1>Ride with Us</h1>
-    <br>
-    <br>
-    <button type="button" class="btn btn-outline-light">Learn more</button>
+<section>
+  <div class="busbackground-image">
+    <div class="background-text">
+      <h1 class = "company-title">Anton Transpo</h1>
+      <br>
+      <h1>Ride with Us</h1>
+      <br>
+      <br>
+      <a href="{% url 'base_app:about' %}"><button type="button" class="btn btn-outline-light">Learn more</button></a>
+    </div>
   </div>
-</div>
-
+</section>
 
 
 {% endblock %}

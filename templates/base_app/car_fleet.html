@@ -4,6 +4,131 @@
 {% block body_block %}
 
     <title>CAR FLEET</title>
+    <link rel="stylesheet" href="{% static 'css/my_style_about.css' %}">
 
-    <h2>INFO ABOUT CAR FLEET</h2>
+    <body>
+      <style >
+        .contact-main-container{
+          background-image: url({%static 'images/back2.jpg'%});
+          background-repeat: round;}
+      </style>
+
+      <section class="contact-main-container">
+
+        <div class=" text-center text-white container">
+          <div class="row">
+            <hr class='header-hr'>
+            <h1 class='display-3  fleet-header d-none d-lg-block'>CHECK OUR AWESOME FLEET</h1>
+            <h1 class='display-5 d-lg-none'>CHECK OUR AWESOME FLEET</h1>
+            <hr class='header-hr'>
+          </div>
+
+          <div class="row" id='card-row'>
+
+            <div class="col">
+              <div class="card bg-dark border-light" style="width: 18rem;">
+                <img class="card-img-top" src="{% static 'images/cardbus1.jpg' %}" alt="Neoplan">
+                <div class="card-body">
+                <h5 class="card-title">Neoplan Tourliner</h5>
+                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab incidunt cumque molestias!</p>
+                <a href="#" class="btn btn-outline-light">Go somewhere</a>
+              </div>
+            </div>
+           </div>
+
+            <div class="col">
+              <div class="card bg-dark border-light" style="width: 18rem;">
+                <img class="card-img-top" src="{% static 'images/cardbus2.jpg' %}" alt="Setra">
+                <div class="card-body">
+                <h5 class="card-title">Setra</h5>
+                <p class="card-text">Some info about how great our buses are. They are indeed exceptional and wonderful.</p>
+                <a href="#" class="btn btn-outline-light">Go somewhere</a>
+              </div>
+             </div>
+           </div>
+
+            <div class="col">
+              <div class="card bg-dark border-light" style="width: 18rem;">
+                <img class="card-img-top" src="{% static 'images/cardbus3.jpg' %}" alt="Volvo bus">
+                <div class="card-body">
+                <h5 class="card-title">Volvo</h5>
+                <p class="card-text">This one is really long and can take many people for a loooong drive. You should try it.</p>
+                <a href="#" class="btn btn-outline-light">Go somewhere</a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col">
+            <div class="card bg-dark border-light" style="width: 18rem;">
+              <img class="card-img-top" src="{% static 'images/cardbus4.jpg' %}" alt="Yellow school bus">
+              <div class="card-body">
+              <h5 class="card-title">School Bus</h5>
+              <p class="card-text"> We all live in a Yellow Super Bus Yellow Super Bus, Yellow Super Bus. Once more!</p>
+              <a href="#" class="btn btn-outline-light">Go somewhere</a>
+            </div>
+          </div>
+
+        </div>
+
+        </div>
+
+        <div class="row"id='card-row'>
+
+          <div class="col">
+            <div class="card bg-dark border-light" style="width: 18rem;">
+              <img class="card-img-top" src="{% static 'images/cardbus5.jpg' %}" alt="Card image cap">
+              <div class="card-body">
+              <h5 class="card-title">Small White Bus</h5>
+              <p class="card-text">We also have some smaller buses if you want to go somewhre with a group of close friends.</p>
+              <a href="#" class="btn btn-outline-light">Go somewhere</a>
+            </div>
+          </div>
+         </div>
+
+         <div class="col">
+           <div class="card bg-dark border-light" style="width: 18rem;">
+             <img class="card-img-top" src="{% static 'images/cardbus6.jpg' %}" alt="Card image cap">
+             <div class="card-body">
+             <h5 class="card-title">Card title</h5>
+             <p class="card-text">Some more lorem ipsum or some other things about our awesome, awesome buses. </p>
+             <a href="#" class="btn btn-outline-light">Go somewhere</a>
+           </div>
+         </div>
+
+       </div>
+
+          <div class="col">
+            <div class="card bg-dark border-light" style="width: 18rem;">
+              <img class="card-img-top" src="{% static 'images/cardbus7.jfif' %}" alt="Card image cap">
+              <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur. Veniam dolorum quidem illo eos ipsam voluptatem.</p>
+              <a href="#" class="btn btn-outline-light">Go somewhere</a>
+            </div>
+           </div>
+         </div>
+
+          <div class="col">
+            <div class="card bg-dark border-light" style="width: 18rem;">
+              <img class="card-img-top" src="{% static 'images/cardbus8.jfif' %}" alt="Red Neoplan">
+              <div class="card-body">
+              <h5 class="card-title">Neoplan Cityliner VIP</h5>
+              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, officiis voluptatem.</p>
+              <a href="#" class="btn btn-outline-light">Go somewhere</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+      </section>
+
+
+    </body>
+
+
 {% endblock %}

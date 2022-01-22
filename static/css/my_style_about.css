@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Noto Serif', serif;
+}
+.busbackground-image {
+  background-color: #cccccc;
+  height: 1500px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.background-text {
+  text-align: center;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: 'Noto Serif', serif;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.company-title{
+  font-size:110px;
+}
+.nav-item{
+  font-size: 1.8em;
+}
+.navbar-brand{
+  font-size: 1.5em;
+  padding-left: 20px;
+}
+
+
+
+footer {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color:#262626;
+    color: gray;
+  }
+
+.about-main-container, .contact-main-container{
+    background-color: #fff;
+    display: flex;
+    flex-direction: col;
+    margin: auto;
+    height: 100%;
+    padding: 50px;
+    padding-bottom: 10%;
+}
+
+.about-side-bar{
+  float:left;
+  padding: 30px;
+  margin: 40px;
+}
+
+.about-right-side{
+  width: 900px;
+  float:left;
+  padding: 40px;
+  margin: 40px;
+  color: white;
+  line-height: 1.5;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-size: 25px;
+}
+
+p, h2{
+  padding-left: 10%;
+  padding-right: 50px;
+}
+.about-photo{
+ border: 1px solid #ddd;
+ border-radius: 4px;
+ padding: 5px;
+ max-width: 100%;
+}
+
+.contact-photo{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  max-width: 100%;
+}
+
+
+#subject{
+  color: white;
+  font-size: 2rem;
+}
+
+h1{
+  color:white;
+}
+
+#id_name{
+  color:white;
+}
+.label-forms{
+  color:white;
+  padding-left: 0;
+}
+.button-form{
+  margin-left: 10%;
+  font-size: 1.5rem;
+}
+
+.contact-info{
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 2;
+}
+
+
+.map-responsive{
+
+    overflow:hidden;
+
+    padding-bottom:56.25%;
+
+    position:relative;
+
+    height:0;
+
+}
+
+.map-responsive iframe{
+
+    left:0;
+
+    top:0;
+
+    height:60%;
+
+    width:80%;
+
+    position:absolute;
+
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+a:hover{
+  color:#A9A9A9;
+}
+
+.tooltip-inner{
+  background-color: green!important;
+  color: red;
+}
+
+
+.header-hr{
+  border: solid 2px white;
+}
+
+.card{
+  padding-top: 40px;
+}
+
+#card-row{
+  margin-top: 40px;
+}
+.card{
+  margin-top: 40px;
+}
+@media all and (max-width:1200px){
+  .contact-info{
+    font-size: 1.5rem;
+  }
+  h2{
+    font-size: 1.7rem;
+  }
+
+}
