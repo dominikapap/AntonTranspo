@@ -1,0 +1,27 @@
+asgiref @ file:///tmp/build/80754af9/asgiref_1625643473416/work
+boto3==1.20.42
+botocore==1.23.42
+certifi==2021.10.8
+charset-normalizer==2.0.10
+dj-database-url==0.5.0
+Django @ file:///tmp/build/80754af9/django_1625585912945/work
+django-environ==0.8.1
+django-heroku==0.3.1
+future==0.18.2
+gunicorn==20.1.0
+heroku==0.1.4
+idna==3.3
+jmespath==0.10.0
+psycopg2 @ file:///C:/ci/psycopg2_1612298766762/work
+python-dateutil==1.5
+python-decouple==3.5
+python-dotenv==0.19.2
+pytz==2021.3
+requests==2.27.1
+s3transfer==0.5.0
+six==1.16.0
+sqlparse @ file:///tmp/build/80754af9/sqlparse_1602184451250/work
+typing-extensions @ file:///tmp/build/80754af9/typing_extensions_1631814937681/work
+urllib3==1.26.8
+whitenoise==5.3.0
+wincertstore==0.2
