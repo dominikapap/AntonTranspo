@@ -26,7 +26,7 @@ STATIC_DIR = Path(BASE_DIR) / 'static'
 SECRET_KEY = 'django-insecure-mgsb^hx^5-6&lzs5*dvhpfgw2%3jg1&v2ln9cn&c-jr2mc$*qu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = false
 
 ALLOWED_HOSTS = []
 
@@ -130,4 +130,13 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+DEFAULT_FROM_EMAIL = 'hotarubi@gmail.com'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'hotarubiq@gmail.com'
+EMAIL_HOST_PASSWORD = 'fhigcrlwnerqhbng'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

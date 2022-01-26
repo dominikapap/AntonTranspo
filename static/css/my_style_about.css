@@ -62,6 +62,13 @@ footer {
   margin: 40px;
 }
 
+.calc-left-side{
+  float:left;
+  padding: 40px;
+  padding-top: 5%;
+  margin: 40px;
+}
+
 .about-right-side{
   width: 900px;
   float:left;
@@ -74,8 +81,7 @@ footer {
 }
 
 p, h2{
-  padding-left: 10%;
-  padding-right: 50px;
+  padding-left: 20px;
 }
 .about-photo{
  border: 1px solid #ddd;
@@ -90,7 +96,13 @@ p, h2{
   padding: 5px;
   max-width: 100%;
 }
-
+.calc-photo
+{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  max-width: 100%;
+}
 
 #subject{
   color: white;
@@ -113,7 +125,7 @@ h1{
   font-size: 1.5rem;
 }
 
-.contact-info{
+.contact-info {
   font-size: 2rem;
   font-weight: bold;
   line-height: 2;
@@ -173,8 +185,58 @@ a:hover{
 .card{
   margin-top: 40px;
 }
+
+.calc-info{
+  font-size: 2rem;
+  padding-left: 5%;
+
+}
+
+.calc-info-header{
+  padding-left: 5%;
+}
+.form-container{
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+.form-group{
+  padding-top: 15px;
+  font-size: 1.5rem;
+}
+
+option{
+   border-radius: 25px;
+}
+#totalPrice{
+  padding-top:20px;
+  font-size: 2rem;
+}
+
+#cartype{
+  background-color: #262626;
+  color:white;
+  border-radius: 25px;
+  padding: 5px;
+}
+#kms{
+   border-radius: 25px;
+   background-color: #262626;
+   color:white;
+  padding: 5px;
+  padding-left: 10px;
+}
+#basic-addon2{
+  border-radius: 25px;
+  background-color: #262626;
+  color:white;
+ padding: 5px;
+ padding-left: 10px;
+}
+
 @media all and (max-width:1200px){
   .contact-info{
+    font-size: 1.5rem;}
+  .calc-info{
     font-size: 1.5rem;
   }
   h2{

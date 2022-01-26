@@ -26,7 +26,7 @@ def contact(request):
             thank= True
 
             try:
-                send_mail(subject, message, 'admin@example.com',['admin@example.com'])
+                send_mail(subject, message, 'hotarubiq@gmail.com',['hotarubiq@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found')
             return render(request, "base_app/contact.html")
