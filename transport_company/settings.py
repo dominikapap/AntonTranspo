@@ -12,10 +12,9 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
-import environ
+from dotenv import load_dotenv
+load_dotenv()
 
-env = environ.Env()
-environ.Env.read_env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATE_DIR = Path(BASE_DIR) / 'templates'
@@ -25,7 +24,7 @@ STATIC_DIR = Path(BASE_DIR) / 'static'
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -128,7 +127,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     STATIC_DIR,]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
@@ -146,7 +145,3 @@ EMAIL_HOST_USER = 'hotarubiq@gmail.com'
 EMAIL_HOST_PASSWORD = 'fhigcrlwnerqhbng'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-
-
-
-django_heroku.settings(locals())
