@@ -25,4 +25,5 @@ Project is created with:
 * project works in a current form, I might still update with new features or change some styling for different screens
 
 ## Contact
+* domi.papierska@gmail.com
 * dominikasz88@interia.pl
