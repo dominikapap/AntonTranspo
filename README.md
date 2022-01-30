@@ -6,6 +6,8 @@ This project is a webpage for a fake bus transport company Anton Transpo, you ca
 Project is created with:
 * Python 3.9.7
 * Django 3.2.5
+* HTML5
+* CSS
 * Bootstrap 5
 * Javascript
 
@@ -22,5 +24,5 @@ Project is created with:
 ## Status
 * project works in a current form, I might still update with new features or change some styling for different screens
 
-##Contact
+## Contact
 * dominikasz88@interia.pl
