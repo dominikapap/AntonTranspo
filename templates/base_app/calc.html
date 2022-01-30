@@ -4,115 +4,89 @@
 {% block body_block %}
 
 <title>CALCULATOR</title>
+
     <style >
       .main-container{
         background-image: url({%static 'images/back2.jpg'%});
-        background-repeat: round;}
+      }
     </style>
 
-    <head>
-      <link rel="stylesheet" href="{% static 'css/my_style_about.css' %}">
-        <script type="text/javascript" src="js/my_script.js"></script>
-    </head>
+
 
 <body>
-
     <section class="main-container">
 
-      <div class="row">
-          <div class="col-5  d-none d-md-block calc-left-side">
-            <img class= "img-fluid calc-photo" src="{% static 'images/calc.jpg' %}" alt="">
-        </div>
+        <div class="row">
 
-        <div class="col ">
-          <div class="text-white pt-5">
-            <h2 class= " calc-info-header pt-4 display-3"> RIDE COST CALCULATOR</h2>
-            <p class= "calc-info pt-3">Check approximate cost of booking a ride  </p>
-          </div>
+            <div class="col-lg order-2 order-lg-1 calc-left-side">
+                <img class= "img-fluid calc-photo" src="{% static 'images/calc.jpg' %}" alt="">
+            </div>
 
-          <div class="text-white form-group container form-container mt-3">
-
-          <form action="" id="costform" onsubmit="return false;">
-          <fieldset>
-
-            <div class="form-group">
-              <label >Select Car Type</label>
-
-                 <select id="cartype" name='cartype' class=' mt-3'
-                 onchange="calculateTotal()">
-                 <option value="None">Select Car Type</option>
-                 <option value="Neoplan Tourliner">Neoplan Tourliner</option>
-                 <option value="Volvo">Volvo</option>
-                 <option value="School Bus">School Bus</option>
-                 <option value="Small White Bus">Small White Bus</option>
-                 <option value="Neoplan Cityliner VIP">Neoplan Cityliner VIP</option>
-                </select>
+            <div class="col-lg order-1 order-lg-2 calc-right-side ">
+              <div class="text-white">
+                <h2 class= " calc-info-header  display-5 d-none d-lg-block"> RIDE COST CALCULATOR</h2>
+                <h2 class= " calc-info-header  display-5 d-block d-lg-none"> RIDE COST CALCULATOR</h2>
+                <p class= "calc-info pt-3">Check approximate cost of booking a ride  </p>
               </div>
 
-              <div class="form-group">
-                <label  for="kms">Journey length: </label>
-                <input  type="number"  name="kms" id="kms" min="0"  maxlength="6" size='10'
-                onchange="calculateTotal()" />
-                <label  for="kms"> KM</label>
-             </div>
+              <div class="text-white form-container">
 
-                 <div class="form-group mt-3">
+                <form  id="costform" onsubmit="return false;">
+                    <fieldset>
 
-                  <label> Parking Fees:</label>
+                        <div class="mb-3">
 
-                  <div class="col">
-                    <div class="form-check form-check-inline  mt-3 mr-auto">
-                   <label class="form-check-label" for="selectedfee">No Fee - 0 PLN</label>
-                   <input type="radio" name="selectedfee" value="Nofee" class="form-check-input"
-                   onclick="calculateTotal()" />
-                   </div>
+                            <label class="cartype-label" >Select Bus Type:</label>
 
-                   <div class="form-check form-check-inline mt-3 mr-0">
-                   <label class="form-check-label" for="selectedfee">Small - 50 PLN</label>
-                   <input type="radio"  name="selectedfee" value="Smallfee" class="form-check-input"
-                   onclick="calculateTotal()" />
-                   </div>
-                  </div>
+                             <select id="cartype" name='cartype'  class=' mt-3'
+                             onchange="calculateTotal()">
+                             <option value="None">-</option>
+                             <option value="Neoplan Tourliner">Neoplan Tourliner</option>
+                             <option value="Volvo">Volvo</option>
+                             <option value="School Bus">School Bus</option>
+                             <option value="Small White Bus">Small White Bus</option>
+                             <option value="Neoplan Cityliner VIP"> Cityliner VIP</option>
+                            </select>
+                          </div>
 
-                  <div class="col">
-                    <div class="form-check  form-check-inline  mt-3">
-                    <label class="form-check-label" for="selectedfee">Medium - 150 PLN</label>
-                    <input type="radio"  name="selectedfee" value="Mediumfee" class="form-check-input"
-                    onclick="calculateTotal()" />
-                    </div>
+                        <div class="mb-3">
 
-                    <div class="form-check  form-check-inline mt-3">
-                    <label class="form-check-label" for="selectedfee">Large - 300 PLN</label>
-                    <input type="radio"  name="selectedfee" value="Largefee" class="form-check-input"
-                    onclick="calculateTotal()" />
-                    </div>
-                  </div>
+                            <label class="fee-label" >Additional Fee: </label>
+
+                            <select id="selectedfee" name='selectedfee'  class=' mt-3'
+                            onchange="calculateTotal()">
+                            <option value="Selectfee">-</option>
+                            <option value="Small">Small - 50P LN</option>
+                            <option value="Medium">Medium - 150 PLN</option>
+                            <option value="Large">Large - 300 PLN</option>
+                            </select>
+                        </div>
 
 
-                 </div>
+                         <div class="mb-3 form-group">
+                            <label  class='kms-label' for="kms">Journey length: </label>
+                            <input  type="number"   placeholder='kms' name="kms" id="kms" min="0"  maxlength="6" size='6'
+                            onchange="calculateTotal()" />
+                         </div>
+
+                        <div class="form-check-reverse  mt-3 mb-3">
+                            <label class="form-check-label" for='includebuffer' class="inlinelabel">Include buffer of 10%?</label>
+                            <input class="form-check-input " type="checkbox" id="includebuffer" name='includebuffer'
+                             onclick="calculateTotal()"/>
+                        </div>
 
 
-                 <div class="form-group mt-3">
-                  <label class="form-check-label" for='includebuffer' class="inlinelabel">Include Buffer of 5%?</label>
-                  <input class="form-check-input" type="checkbox" id="includebuffer" name='includebuffer'
-                  onclick="calculateTotal()"/>
+
+                        <div class="font-weight-bold display-4 " id="total">Total Price is: <span id="totalPrice"></span></div>
+
+                    </fieldset>
+                </form>
                 </div>
-
-
-                  <div  class="mt-3">
-                    <p class="font-weight-bold display-3" id="totalPrice">Total Price is: </p>
-                    <p class="font-weight-light"> <small>Additional fees may apply</small></p>
-
-       </fieldset>
-    </form>
-      </div>
+            </div>
         </div>
-      </div>
-
-
-
-</section>
-
-
+    </section>
 </body>
+
+<script type="text/javascript" src="{% static "js/my_script.js" %}"></script>
+
 {% endblock %}

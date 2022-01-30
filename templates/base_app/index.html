@@ -2,23 +2,25 @@
 {% extends "base_app/base.html" %}
 {% load static %}
 {% block body_block %}
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Home</title>
 
-<style>
-.busbackground-image {
-  background-image: url({%static 'images/b3.jpg'%});
-}
-</style>
+    <style>
+    .busbackground-image {
+        background-image: url({%static 'images/b3.jpg'%});
+    }
+    </style>
+
 <section>
   <div class="busbackground-image">
     <div class="background-text">
-      <h1 class = "company-title">Anton Transpo</h1>
+      <h1 class = "company-title d-none d-md-block">Anton Transpo</h1>
+      <h1 class = "company-title-small d-md-none">Anton Transpo</h1>
       <br>
-      <h1>Ride with Us</h1>
+      <h1 class="company-slogan">Ride with Us</h1>
       <br>
       <br>
-      <a href="{% url 'base_app:about' %}"><button type="button" class="btn btn-outline-light">Learn more</button></a>
+      <a href="{% url 'base_app:about' %}"><button type="button" class="btn btn-outline-light btn-lg btn-index">LEARN MORE</button></a>
     </div>
   </div>
 </section>

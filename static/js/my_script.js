@@ -19,10 +19,10 @@ function getCarTypePrice()
 }
 
 var additional_fees = new Array();
-additional_fees["Nofee"]=0;
-additional_fees["Smallfee"]=50;
-additional_fees["Mediumfee"]=150;
-additional_fees["Largefee"]=300;
+additional_fees["Selectfee"]=0;
+additional_fees["Small"]=50;
+additional_fees["Medium"]=150;
+additional_fees["Large"]=300;
 
 
 function getAdditionalFee()
@@ -30,16 +30,7 @@ function getAdditionalFee()
     var additionalFee=0;
     var theForm = document.forms["costform"];
     var selectedFee = theForm.elements["selectedfee"];
-    for(var i = 0; i < selectedFee.length; i++)
-    {
-        //if the radio button is checked
-        if(selectedFee[i].checked)
-        {
-
-            additionalFee = additional_fees[selectedFee[i].value];
-            break;
-        }
-    }
+    additionalFee = additional_fees[selectedFee.value];
     return additionalFee;
 }
 
@@ -51,7 +42,7 @@ function addbufferFee()
 
     if(includeBufferFee.checked==true)
     {
-        bufferFee=1.05;
+        bufferFee=1.1;
     }
     return bufferFee;
 }
@@ -82,7 +73,6 @@ function calculateTotal()
 
 
     //display the result
-    document.getElementById('totalPrice').innerHTML =
-                                      "Total Price is: "+ ridePrice.toFixed(2)  + " PLN";
+    document.getElementById('totalPrice').innerHTML = ridePrice.toFixed(2)  + " PLN";
 
 }

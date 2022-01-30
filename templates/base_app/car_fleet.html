@@ -3,132 +3,80 @@
 {% load static %}
 {% block body_block %}
 
-    <title>CAR FLEET</title>
-    <link rel="stylesheet" href="{% static 'css/my_style_about.css' %}">
+<title>CAR FLEET</title>
 
-    <body>
-      <style >
-        .contact-main-container{
-          background-image: url({%static 'images/back2.jpg'%});
-          background-repeat: round;}
-      </style>
+<body>
 
-      <section class="contact-main-container">
+    <style >
+        .main-container{
+            background-image: url({%static 'images/back2.jpg'%});
+        }
+     </style>
 
-        <div class=" text-center text-white container">
-          <div class="row">
-            <hr class='header-hr'>
-            <h1 class='display-3  fleet-header d-none d-lg-block'>CHECK OUR AWESOME FLEET</h1>
-            <h1 class='display-5 d-lg-none'>CHECK OUR AWESOME FLEET</h1>
-            <hr class='header-hr'>
-          </div>
+    <section class="main-container ">
 
-          <div class="row" id='card-row'>
+        <div class="container-fluid">
 
-            <div class="col">
-              <div class="card bg-dark border-light" style="width: 18rem;">
-                <img class="card-img-top" src="{% static 'images/cardbus1.jpg' %}" alt="Neoplan">
-                <div class="card-body">
-                <h5 class="card-title">Neoplan Tourliner</h5>
-                <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab incidunt cumque molestias!</p>
-                <a href="{% url 'base_app:calc' %}#Neoplan" class="btn btn-outline-light">Go somewhere</a>
-              </div>
-            </div>
-           </div>
-
-            <div class="col">
-              <div class="card bg-dark border-light" style="width: 18rem;">
-                <img class="card-img-top" src="{% static 'images/cardbus2.jpg' %}" alt="Setra">
-                <div class="card-body">
-                <h5 class="card-title">Setra</h5>
-                <p class="card-text">Some info about how great our buses are. They are indeed exceptional and wonderful.</p>
-                <a href="" class="btn btn-outline-light">Go somewhere</a>
-              </div>
-             </div>
-           </div>
-
-            <div class="col">
-              <div class="card bg-dark border-light" style="width: 18rem;">
-                <img class="card-img-top" src="{% static 'images/cardbus3.jpg' %}" alt="Volvo bus">
-                <div class="card-body">
-                <h5 class="card-title">Volvo</h5>
-                <p class="card-text">This one is really long and can take many people for a loooong drive. You should try it.</p>
-                <a href="" class="btn btn-outline-light">Go somewhere</a>
-              </div>
+            <div class=" text-center text-white row mb-5 ">
+                <h1 class='display-3 d-none d-lg-block'><span class="fleet-header">CHECK OUT OUR AWESOME FLEET</span></h1>
+                <h1 class='display-5 fleet-header d-lg-none'>CHECK OUT OUR AWESOME FLEET</h1>
             </div>
 
-          </div>
+            <div class="row text-white pt-5">
 
-          <div class="col">
-            <div class="card bg-dark border-light" style="width: 18rem;">
-              <img class="card-img-top" src="{% static 'images/cardbus4.jpg' %}" alt="Yellow school bus">
-              <div class="card-body">
-              <h5 class="card-title">School Bus</h5>
-              <p class="card-text"> We all live in a Yellow Super Bus Yellow Super Bus, Yellow Super Bus. Once more!</p>
-              <a href="" class="btn btn-outline-light">Go somewhere</a>
+                <div class="col-lg carousel-col">
+                    <div id="carouselIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+
+                        <div class="carousel-inner">
+
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="{% static 'images/cardbus1.jpg' %}" alt="Neoplan">
+                                <div class="carousel-caption d-none d-md-block"><h1 class='display-3'>NEOPLAN TOURLINER</h1></div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="{% static 'images/cardbus2.jpg' %}" alt="Setra">
+                                <div class="carousel-caption d-none d-md-block"><h1 class='display-3'>SETRA</h1></div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="{% static 'images/cardbus3.jpg' %}" alt="Volvo bus">
+                                <div class="carousel-caption d-none d-md-block"><h1 class='display-3'>VOLVO</h1></div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="{% static 'images/cardbus4.jpg' %}" alt="School Buss">
+                                <div class="carousel-caption d-none d-md-block"><h1 class='display-3'>SCHOOL BUS</h1></div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="{% static 'images/cardbus5.jpg' %}" alt="Small White Bus">
+                                <div class="carousel-caption d-none d-md-block"><h1 class='display-3'>SMALL WHITE BUS</h></div>
+                            </div>
+                          </div>
+
+                          <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                          </a>
+
+                          <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                          </a>
+                    </div>
+                </div>
+
+                <div class= "col-lg">
+                    <p class="fleet-right-side">We have many different buses to accomodate different needs. We have big luxurious buses and small ones (but still very comfortable) as well.</p>
+                    <p class="fleet-right-side">They have WIFI and air conditioning, TV, minibar and minifridge. They will take you for a magical journey to your chosen destination. Lorem ipsum dolor sit amet consectetur.</p>
+                    <p class= "fleet-right-side">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="fleet-right-side">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                </div>
+
             </div>
-          </div>
-
-        </div>
-
-        </div>
-
-        <div class="row"id='card-row'>
-
-          <div class="col">
-            <div class="card bg-dark border-light" style="width: 18rem;">
-              <img class="card-img-top" src="{% static 'images/cardbus5.jpg' %}" alt="Card image cap">
-              <div class="card-body">
-              <h5 class="card-title">Small White Bus</h5>
-              <p class="card-text">We also have some smaller buses if you want to go somewhre with a group of close friends.</p>
-              <a href=href="" class="btn btn-outline-light">Go somewhere</a>
-            </div>
-          </div>
-         </div>
-
-         <div class="col">
-           <div class="card bg-dark border-light" style="width: 18rem;">
-             <img class="card-img-top" src="{% static 'images/cardbus6.jpg' %}" alt="Card image cap">
-             <div class="card-body">
-             <h5 class="card-title">Card title</h5>
-             <p class="card-text">Some more lorem ipsum or some other things about our awesome, awesome buses. </p>
-             <a href="" class="btn btn-outline-light">Go somewhere</a>
-           </div>
-         </div>
-
-       </div>
-
-          <div class="col">
-            <div class="card bg-dark border-light" style="width: 18rem;">
-              <img class="card-img-top" src="{% static 'images/cardbus7.jfif' %}" alt="Card image cap">
-              <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur. Veniam dolorum quidem illo eos ipsam voluptatem.</p>
-              <a href="" class="btn btn-outline-light">Go somewhere</a>
-            </div>
-           </div>
-         </div>
-
-          <div class="col">
-            <div class="card bg-dark border-light" style="width: 18rem;">
-              <img class="card-img-top" src="{% static 'images/cardbus8.jfif' %}" alt="Red Neoplan">
-              <div class="card-body">
-              <h5 class="card-title">Neoplan Cityliner VIP</h5>
-              <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur, officiis voluptatem.</p>
-              <a href="" class="btn btn-outline-light">Go somewhere</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-
-
-
-      </section>
-
-
-    </body>
+    </section>
+</body>
 
 
 {% endblock %}

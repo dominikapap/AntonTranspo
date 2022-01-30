@@ -35,11 +35,6 @@ def contact(request):
     context={'form':form}
     return render (request, "base_app/contact.html", context)
 
-def thank_you(request):
-    return render(request,'base_app/thank_you.html')
 
 def car_fleet(request):
     return render(request,'base_app/car_fleet.html')
-
-def base(request):
-    return render(request,'base_app/base.html')

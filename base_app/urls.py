@@ -10,6 +10,4 @@ urlpatterns = [
     path('cost_calculator/', views.calc, name ='calc'),
     path('contact/', views.contact, name = 'contact'),
     path('car_fleet/', views.car_fleet, name = 'car_fleet'),
-    path('thank_you/', views.thank_you, name = 'thank_you'),
-    path('base/', views.base, name ='base'),
     ]
