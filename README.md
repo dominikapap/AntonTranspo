@@ -18,8 +18,8 @@ Project is created with:
 
 
 ## Sources
-* bus images from Unsplash.com
-* logo by DesignEvo free logo designer
+* bus images from http://unsplash.com
+* logo by https://www.designevo.com/ free logo designer
 
 ## Status
 * project works in a current form, I might still update with new features or change some styling for different screens
