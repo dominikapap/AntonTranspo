@@ -1,58 +1,49 @@
-var theForm = document.forms["costform"];
 
-var car_type_price= new Array();
-car_type_price["None"]=0;
-car_type_price["Neoplan Tourliner"]=2;
-car_type_price["Volvo"]=2.3;
-car_type_price["School Bus"]=1.9;
-car_type_price["Small White Bus"]=1.5;
-car_type_price["Neoplan Cityliner VIP"]=2.5;
+var myForm = document.forms["costform"];
 
-
-function getCarTypePrice()
-{
-    var carTypePrice=0;
-    var theForm = document.forms["costform"];
-    var selectedCarType = theForm.elements["cartype"];
-    carTypePrice = car_type_price[selectedCarType.value];
-    return carTypePrice;
+function getCarTypePrice(){
+  let carTypeRates={
+    "None":0,
+    "Neoplan Tourliner":2,
+    "Volvo":2.3,
+    "School Bus":1.9,
+    "Small White Bus":1.5,
+    "Neoplan Cityliner VIP":2.5}
+  let carTypePrice=0;
+  const selectedCarType = myForm.elements["cartype"];
+  carTypePrice = carTypeRates[selectedCarType.value];
+  return carTypePrice;
 }
 
-var additional_fees = new Array();
-additional_fees["Selectfee"]=0;
-additional_fees["Small"]=50;
-additional_fees["Medium"]=150;
-additional_fees["Large"]=300;
-
-
-function getAdditionalFee()
-{
-    var additionalFee=0;
-    var theForm = document.forms["costform"];
-    var selectedFee = theForm.elements["selectedfee"];
-    additionalFee = additional_fees[selectedFee.value];
-    return additionalFee;
+function getAdditionalFee(){
+  let fees = {
+  "Selectfee":0,
+  "Small":50,
+  "Medium":150,
+  "Large":300
+}
+  let additionalFee=0;
+  const selectedFee = myForm.elements["selectedfee"];
+  additionalFee = fees[selectedFee.value];
+  return additionalFee;
 }
 
-function addbufferFee()
-{
-    var bufferFee=1;
-    var theForm = document.forms["costform"];
-    var includeBufferFee = theForm.elements["includebuffer"];
+function addbufferFee(){
+  let bufferFee=1;
+  const includeBufferFee = myForm.elements["includebuffer"];
 
-    if(includeBufferFee.checked==true)
-    {
-        bufferFee=1.1;
-    }
-    return bufferFee;
+  if(includeBufferFee.checked==true)
+  {
+      bufferFee=1.1;
+  }
+  return bufferFee;
 }
 
 
 function getKms()
 {
-    var theForm = document.forms["costform"];
-    var kms = theForm.elements["kms"];
-    var howmany =0;
+    const kms = myForm.elements["kms"];
+    let howmany =0;
     if(kms.value!="")
     {
         howmany = parseInt(kms.value);
@@ -69,7 +60,7 @@ function getKms()
 
 function calculateTotal()
 {
-    var ridePrice = (getAdditionalFee() + (getKms()*(getCarTypePrice())) ) *addbufferFee();
+    const ridePrice = (getAdditionalFee() + (getKms()*(getCarTypePrice())) ) *addbufferFee();
 
 
     //display the result
