@@ -6,81 +6,78 @@
 <title>CONTACT</title>
 
 <body>
-    <style >
-      .main-container{
-        background-image: url({%static 'images/back2.jpg'%});
-      }
-    </style>
+ 
+<main>
+<section class="main-container top-container">
+  <h2 class="text-center mx-3 header mb-5">CONTACT PAGE</h2>
+  <div class="contact-container">
 
-    <div class="main-container">
-      <div class="container-fluid">
-          <div class="row mb-5">
-            <div class="col-lg order-2 order-sm-1">
-                <img class =' contact-photo img-fluid' src="{% static 'images/contact.jpg' %}" alt="yellow bus toy">
+      <div class=" mb-5 contact-photo ">
+          <img class ='photo img-fluid  ' src="{% static 'images/contact.jpg' %}" alt="yellow bus toy">
+      </div>
+
+      <div class=" contact-form-container ">
+
+        {% if username %}
+        <p class='display-4 thankyou'> Thank you, {{username}}</p>
+        <p class='display-5 thankyou'>We received your message and will contact you back shortly</p>
+
+    {% else %}
+        <p class="contact-form-text">To contact us please fill out this form. Contact info can be also found below</p>
+
+        <form  method="POST" class='label-forms '>
+         {% csrf_token %}
+         <div class='row'>
+                <div class='col-md'>
+
+                    <label class="mx-md-3" for='id_name'>Name:</label>
+                    <div class="mx-md-3"  >{{form.name}}</div>
             </div>
-
-            <div class="col-lg order-1 order-sm-2 text-white contact-form-container">
-
-            {% if username %}
-                <h1 class='display-4 thankyou'> Thank you, {{username}}</h2>
-                <br>
-                <h2 class='display-5 thankyou'>We received your message and will contact you back shortly</p>
-
-            {% else %}
-                <h2 class="text-center mb-2">CONTACT FORM</h2>
-                <p class="contact-form-text">To contact us please fill out this form. Contact info can be also found below</p>
-
-                <form  method="POST" class='label-forms '>
-                 {% csrf_token %}
-                 <div class='row'>
-                        <div class='col-md'>
-
-                            <label class="mx-md-3" for='id_name'>Name:</label>
-                            <div class="mx-md-3"  >{{form.name}}</div>
-                    </div>
-                        <div class='col-md'>
-                            <label class="mx-md-3" for='id_email'>Email:</label>
-                            <div class="mx-md-3" >{{form.email_address}}</div>
-                    </div>
-                </div>
-
-                    <label class="mx-md-3 mt-2" for"id_message">Message</label>
-                    <div class="mx-md-3" >{{form.message}}</div>
-
-                    <button class = "btn btn-outline-light  button-form m-3  p-md-3" type="submit">SEND<i class="far fa-envelope p-2"></i></button>
-                </form>
-                {% endif %}
-              </div>
-
-            </div>
-
-            <div class="row contact-second-row">
-              <div class="col-lg contact-info text-white ">
-                <h2 class=" contact-info-header"><span class="contact-info-header-span">You can find us here:</span></h2>
-                <p class='pt-3'><i class="fas fa-map-marker-alt mx-2"></i>Adress:</p>
-                <p >Not Real Street 12/34</p>
-                <p >00-000 Warsaw</p>
-                <p class='mb-4'>Poland</p>
-                <h2 class="contact-info-header"><span class="contact-info-header-span">Contact us:</span></h2>
-                <p class='pt-3'><a href="tel:123-456-7890" data-toggle="tooltip" data-placement="top" title="Please don't call this number"><i class="fas fa-phone p-2"></i>123-456-7890</a></p>
-                <p  data-toggle="tooltip" data-placement="right" title="Not an actual email address"><a href="mailto:domi.papierska@gmail.com"><i class="far fa-envelope p-2"></i>lorem@ipsum.com</a></p>
-              </div>
-
-              <div class="col-lg d-none d-md-block google-map map-responsive ">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156388.35438654714!2d20.921113966387182!3d52.233065320451125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0be2a88ead3fc!2sWarszawa!5e0!3m2!1spl!2spl!4v1643382110211!5m2!1spl!2spl" width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-              </div>
-
-              <div class="col d-md-none google-map ">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156388.35438654714!2d20.921113966387182!3d52.233065320451125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0be2a88ead3fc!2sWarszawa!5e0!3m2!1spl!2spl!4v1643382110211!5m2!1spl!2spl" width="340" height="240" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-              </div>
-
+                <div class='col-md'>
+                    <label class="mx-md-3" for='id_email'>Email:</label>
+                    <div class="mx-md-3" >{{form.email_address}}</div>
             </div>
         </div>
+
+            <label class="mx-md-3 mt-2" for"id_message">Message</label>
+            <div class="mx-md-3" >{{form.message}}</div>
+
+            <button class = "btn btn-outline-light  button-form m-3 " type="submit">SEND<i class="far fa-envelope p-2"></i></button>
+        </form>
+        {% endif %}
+      </div>
+
     </div>
 
+    
+
+      <div class="row contact-second-row">
+        <div class="col-lg contact-info  ">
+          <h2 class="contact-info-header"><span class="contact-info-header-span">You can find us here:</span></h2>
+          <p class='pt-3'><i class="fas fa-map-marker-alt mx-2"></i>Adress:</p>
+          <p >Not Real Street 12/34</p>
+          <p >00-000 Warsaw</p>
+          <p class='mb-5'>Poland</p>
+          <h2 class="contact-info-header"><span class="contact-info-header-span">Contact us:</span></h2>
+          <p class='pt-3'><a href="tel:123-456-7890" data-toggle="tooltip" data-placement="top" title="Please don't call this number"><i class="fas fa-phone p-2"></i>123-456-7890</a></p>
+          <p  data-toggle="tooltip" data-placement="right" title="Not an actual email address"><a href="mailto:domi.papierska@gmail.com"><i class="far fa-envelope p-2"></i>lorem@ipsum.com</a></p>
+        </div>
+
+        <div class="col-lg d-none d-md-block google-map map-responsive ">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156388.35438654714!2d20.921113966387182!3d52.233065320451125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0be2a88ead3fc!2sWarszawa!5e0!3m2!1spl!2spl!4v1643382110211!5m2!1spl!2spl" width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <div class="col d-md-none google-map ">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d156388.35438654714!2d20.921113966387182!3d52.233065320451125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0be2a88ead3fc!2sWarszawa!5e0!3m2!1spl!2spl!4v1643382110211!5m2!1spl!2spl" width="340" height="240" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+      </div>
+  </div>
+
+</section>
 
 
-
+</main>
 
 
 
