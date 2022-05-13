@@ -5,89 +5,87 @@
 
 <title>CALCULATOR</title>
 
-    <style >
-      .main-container{
-        background-image: url({%static 'images/back2.jpg'%});
-      }
-    </style>
+<style>
+  .main-container {
+    background-image: url({%static 'images/back2.jpg'%});
+  }
+</style>
 
 
 
 <body>
   <main>
-  <section class="main-container top-container">
-    <h2 class= "header mx-3 "> RIDE COST CALCULATOR</h2>
-  
+    <section class="main-container top-container">
+      <h2 class="header mx-3 "> RIDE COST CALCULATOR</h2>
+
       <div class="row">
         <div class="col-xl calc-left-side ">
-            <img class= "img-fluid photo mx-3" src="{% static 'images/calc.jpg' %}" alt="man using a caculator">
+          <img class="img-fluid photo mx-3" src="{% static 'images/calc.jpg' %}" alt="man using a caculator">
         </div>
-  
+
         <div class="col-xl right-side-calc ">
-          
-            
-            <p class= "calc-info pt-3">Check approximate cost of booking a ride  </p>
-          
-  
+
+
+          <p class="calc-info pt-3">Check approximate cost of booking a ride </p>
+
+
           <div class="form-container">
-  
-            <form  id="costform" onsubmit="return false;">
-                
+
+            <form id="costform" onsubmit="return false;">
+
               <div class="form-group">
-                <label  class='kms-label' for="kms">Journey length: </label>
-                <input  type="number"   placeholder='kms' name="kms" id="kms" min="0"  maxlength="6" size='6'
-                onchange="calculateTotal()" />
-             </div>
-                    <div >
-  
-                        <label class="cartype-label" >Select Bus Type:</label>
-  
-                         <select id="cartype" name='cartype'
-                         onchange="calculateTotal()">
-                         <option value="None">-</option>
-                         <option value="Neoplan Tourliner">Neoplan Tourliner</option>
-                         <option value="Volvo">Volvo</option>
-                         <option value="School Bus">School Bus</option>
-                         <option value="Small White Bus">Small White Bus</option>
-                         <option value="Neoplan Cityliner VIP"> Cityliner VIP</option>
-                        </select>
-                      </div>
-  
-                    <div >
-  
-                        <label class="fee-label" >Additional Fee: </label>
-  
-                        <select id="selectedfee" name='selectedfee'  
-                        onchange="calculateTotal()">
-                        <option value="Selectfee">-</option>
-                        <option value="Small">Small - 50P LN</option>
-                        <option value="Medium">Medium - 150 PLN</option>
-                        <option value="Large">Large - 300 PLN</option>
-                        </select>
-                    </div>
-  
-  
-                     
-  
-                    <div class="form-check-reverse ">
-                        <label class="form-check-label" for='includebuffer' class="inlinelabel">Include buffer of 10%?</label>
-                        <input class="form-check-input " type="checkbox" id="includebuffer" name='includebuffer'
-                         onclick="calculateTotal()"/>
-                    </div>
-  
-  
-  
-                    <div class="font-weight-bold display-4 " id="total">Total Price is: <span id="totalPrice"></span></div>
-  
-               
+                <label class='kms-label' for="kms">Journey length: </label>
+                <input type="number" placeholder='kms' name="kms" id="kms" min="0" maxlength="6" size='6'
+                  onchange="calculateTotal()" />
+              </div>
+              <div>
+
+                <label class="cartype-label">Select Bus Type:</label>
+
+                <select id="cartype" name='cartype' onchange="calculateTotal()">
+                  <option value="None">-</option>
+                  <option value="Neoplan Tourliner">Neoplan Tourliner</option>
+                  <option value="Volvo">Volvo</option>
+                  <option value="School Bus">School Bus</option>
+                  <option value="Small White Bus">Small White Bus</option>
+                  <option value="Neoplan Cityliner VIP"> Cityliner VIP</option>
+                </select>
+              </div>
+
+              <div>
+
+                <label class="fee-label">Additional Fee: </label>
+
+                <select id="selectedfee" name='selectedfee' onchange="calculateTotal()">
+                  <option value="Selectfee">-</option>
+                  <option value="Small">Small - 50P LN</option>
+                  <option value="Medium">Medium - 150 PLN</option>
+                  <option value="Large">Large - 300 PLN</option>
+                </select>
+              </div>
+
+
+
+
+              <div class="form-check-reverse ">
+                <label class="form-check-label" for='includebuffer' class="inlinelabel">Include buffer of 10%?</label>
+                <input class="form-check-input " type="checkbox" id="includebuffer" name='includebuffer'
+                  onclick="calculateTotal()" />
+              </div>
+
+
+
+              <div class="font-weight-bold display-4 " id="total">Total Price is: <span id="totalPrice"></span></div>
+
+
             </form>
-            </div>
           </div>
-    </div>
-  </section>
-</main>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 
-<script type="text/javascript" src="{% static "js/my_script.js" %}"></script>
+<script type="text/javascript" src="{% static " js/my_script.js" %}"></script>
 
 {% endblock %}
